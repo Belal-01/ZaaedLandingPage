@@ -2,7 +2,7 @@
 import './App.css'
 import Hero from '../Sections/Hero'
 import Header from '../Sections/Header'
-import AppView from '../Sections/appView'
+import AppView from '../Sections/AppView'
 
 function App() {
 
