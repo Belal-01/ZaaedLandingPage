@@ -22,10 +22,10 @@ const Header = () => {
     href:'#calls'
   },]
   return (
-    <div className='fixed left-0 right-0 top-0 h-20 z-20 bg-white flex flex-row justify-between items-center px-20 text-primaryColor '>
+    <div className='fixed left-0 right-0 top-0 h-20 z-20 bg-bgLightColor flex flex-row justify-between items-center px-20 text-primaryColor '>
       <div>
         
-          <img src="/logo.png" className='w-24 h-18' alt="" />
+          <img src="/logoLight.jpg" className='w-24 h-18' alt="" />
        
       </div>
       <div className=''>

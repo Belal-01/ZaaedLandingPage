@@ -109,9 +109,9 @@ const AppView = () => {
  }
 
   return (
-    <div className='py-40'>
-      <div className='py-20'>
-        <h1 className='text-4xl font-bold text-center'>صور التطبيف</h1>
+    <div className='py-10'>
+      <div className='py-10'>
+        <h1 className='text-4xl font-bold text-center text-primaryColor'>صور التطبيف</h1>
       </div>
       <div className='relative  '>
         <div className='overflow-x-auto appViewSlider'>
@@ -130,8 +130,8 @@ const AppView = () => {
       </div>
 
       <div className='py-10 flex flex-row gap-10 items-center justify-center'>
-        <button className='py-2 px-4 bg-gray-400 opacity-45 text-white rounded-4xl cursor-pointer' onClick={()=>handleImgScroll("right")}>
-          <FaArrowRight />
+        <button className='py-2 px-4 bg-white opacity-45  text-white rounded-4xl cursor-pointer' onClick={()=>handleImgScroll("right")}>
+          <FaArrowRight className='text-primaryColor'/>
           </button>
         <div className='flex flex-row gap-2'>
           {imgs.map((img,index)=>{
@@ -141,8 +141,8 @@ const AppView = () => {
             
            </div>)})}
         </div>
-        <button className='py-2 px-4 bg-gray-400 opacity-45 text-white rounded-4xl cursor-pointer' onClick={()=>handleImgScroll("left")}>
-              <FaArrowLeft />
+        <button className='py-2 px-4  opacity-45 text-white rounded-4xl cursor-pointer' onClick={()=>handleImgScroll("left")}>
+              <FaArrowLeft className='text-primaryColor'/>
           </button>
       </div>
     </div>
