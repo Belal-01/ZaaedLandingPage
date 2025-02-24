@@ -1,0 +1,7 @@
+.heroContainer{
+  clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.appViewSlider::-webkit-scrollbar{
+  display: none;
+  }
