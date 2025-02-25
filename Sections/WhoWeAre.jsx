@@ -1,26 +1,8 @@
 import React from 'react'
 import Feature from '../components/Feature'
+import { featurestext } from '../constants/scripts'
 
 
-const featurestext = [
-  {
-    icon:"LuAlarmClock",
-    text:"إنشاء الطلب يتم في دقائق"
-  },
-  {
-    icon:"GiTakeMyMoney",
-    text:"شراء مواد البناء الزائدة مما يقلل التكاليف"
-  },
-  {
-    icon:"AiOutlineSafety",
-    text:"عملية بيع آمنة "
-  },
-  
-  {
-    icon:"BsBank",
-    text:"تحويلات بنكية موثوقة لقيمة السعر"
-  }
-]
 const WhoWeAre = () => {
 
   

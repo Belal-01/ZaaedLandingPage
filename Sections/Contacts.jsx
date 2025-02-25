@@ -1,24 +1,8 @@
 import React from 'react'
 import { BiPhone } from 'react-icons/bi'
 import ContactInfo from '../components/ContactInfo'
+import { contactsInfo } from '../constants/scripts'
 
-const contactsInfo = [
-  {
-    data:"000 000  00 09",
-    text:"رقم الجوال",
-    icon:"phone"
-  },
-  {
-    data:" 000 000 000 +963",
-    text:"الواتساب",
-    icon:"whatsApp"
-  },
-  {
-    data:"Support@gmail.com",
-    text:"البريد الإلكتروني",
-    icon:"email"
-  },
-]
 const Contacts = () => {
   return (
     <section id='contacts' className=' sm:px-20 px-10'>
