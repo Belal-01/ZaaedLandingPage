@@ -1,10 +1,10 @@
 export const Links = [{
   name:"من نحن ",
-  href:'#'
+  href:'#who'
 },
 {
   name:"مزايا التطبيق",
-  href:'#features'
+  href:'#who'
 },
 {
   name:"صور ألتطبيق",
@@ -16,7 +16,7 @@ export const Links = [{
 },
 {
   name:"اتصل بنا",
-  href:'#calls'
+  href:'#contacts'
 },]
 
 export const socialMedia = [

@@ -109,7 +109,7 @@ const AppView = () => {
  }
 
   return (
-    <div className='py-10'>
+    <section className='py-10' id='appPictures'>
       <div className='py-10'>
         <h1 className='text-4xl font-bold text-center text-primaryColor'>صور التطبيف</h1>
       </div>
@@ -145,7 +145,7 @@ const AppView = () => {
               <FaArrowLeft className='text-primaryColor'/>
           </button>
       </div>
-    </div>
+    </section>
   )
 }
 

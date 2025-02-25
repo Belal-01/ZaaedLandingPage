@@ -34,7 +34,7 @@ const Feature = (props) => {
 
 
   return (
-    <div className={`featureBox-${props.id} flex-1 flex flex-col gap-10 bg-bgLightColor py-14 px-6 rounded-2xl cursor-pointer` }onMouseOver={()=>handleMousehover(props.id)}
+    <div className={`featureBox-${props.id} lg:col-span-1 md:col-span-2 col-span-4 flex flex-col gap-10 bg-bgLightColor py-14 px-6 rounded-2xl cursor-pointer` }onMouseOver={()=>handleMousehover(props.id)}
     onMouseLeave={()=>handleMouseLeave(props.id)}>
       <div className="icon flex flex-row justify-center" >
         {props.icon==="BsBank"&&<BsBank className='w-10 h-10 text-primaryColor'/>}

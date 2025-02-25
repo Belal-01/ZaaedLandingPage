@@ -14,6 +14,16 @@ const Quastions = (props) => {
 
 
   useGSAP(()=>{
+
+     // get the hidht of the answer 
+  const answerElement = document.querySelector(`.answerBox-${props.id}`);
+  const quastionEmlement = document.querySelector(`.quastionText-${props.id}`);
+  const quastionHeight = quastionEmlement.scrollHeight;
+  const answerHeight = answerElement.scrollHeight;
+  // console.log("answerHight"+answerHeight)
+  // console.log("quastionHiehgt"+quastionHeight)
+
+
     if(!showAnswer){
       gsap.to(`.verLine-${props.id}`,{
         opacity:1,
@@ -27,7 +37,7 @@ const Quastions = (props) => {
         
       })
       gsap.to(`.answerBox-${props.id}`,{
-        height:40,
+        height:quastionHeight,
         duration:0.2
       })
       gsap.to(`.answerText-${props.id}`,{
@@ -51,7 +61,7 @@ const Quastions = (props) => {
         
       })
       gsap.to(`.answerBox-${props.id}`,{
-        height:100,
+        height:answerHeight,
         duration:0.2
       })
       gsap.to(`.answerText-${props.id}`,{
@@ -66,12 +76,12 @@ const Quastions = (props) => {
   },[showAnswer])
 
   return (
-    <div className='quastion flex flex-row justify-between w-full py-8 border-t-2 border-textColor'>
+    <div className='quastion flex flex-row gap-3 justify-between w-full sm:py-8 py-5 border-t-2 border-textColor'>
       <div className='flex flex-row gap-8'>
         <span className='text-2xl'>{props.id+1}</span>
-        <div className={`flex flex-col gap-5 transition-all  answerBox-${props.id}`}>
-          <span className={`text-2xl  font-bold ${showAnswer?'text-primaryColor':'text-titleColor'} transition-colors`}>{props.quastion}</span>
-         { <span className={`answerText-${props.id}`}>{props.answer}</span>}
+        <div className={`flex flex-col gap-5 transition-all h-fit answerBox-${props.id}`}>
+          <span className={`sm:text-2xl text-xl font-bold ${showAnswer?'text-primaryColor':'text-titleColor'} transition-colors min-h-fit quastionText-${props.id}`}>{props.quastion}</span>
+         { <span className={`answerText-${props.id} min-h-fit`}>{props.answer}</span>}
         </div>
       </div>
       <div className='cursor-pointer plusSign' onClick={()=>setShowAnswer(prev=>!prev)}>

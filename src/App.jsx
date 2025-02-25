@@ -10,7 +10,7 @@ import Footer from '../Sections/Footer'
 
 function App() {
   return (
-    <div className='font-cairo'>
+    <div className='font-cairo '>
       <Header/>
       <Hero />
       <WhoWeAre />

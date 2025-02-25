@@ -5,10 +5,10 @@ import { socialMedia } from '../constants/scripts'
 
 const Footer = () => {
   return (
-    <section className='px-20'>
+    <section className='sm:px-20 px-10' >
 
       <div className='flex flex-row justify-center'>
-       <ul className='flex flex-row gap-10 items-center '>
+       <ul className='flex flex-row flex-wrap justify-center gap-10 items-center '>
           {Links.map((link,index)=>
           <li className='font-medium text-lg text-textColor hover:text-primaryColor transition-all ' key={index}><a href={link.href}>{link.name}</a>
           </li>)}
