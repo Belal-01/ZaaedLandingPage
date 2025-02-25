@@ -18,7 +18,7 @@ const Footer = () => {
           {socialMedia.map((social,index)=><IconContainer name={social.name} url={social.url} key={index}/>)}
       </div>
       <p className='text-center text-textColor py-5'>زائد 2024، جميع الحقوق محفوظة</p>
-      <p className='text-center text-textColor pb-5'>تصميم و تطوير <a className='text-primaryColor' href="">BelalMustafa</a></p>
+      <p className='text-center text-textColor pb-5'>تصميم و تطوير <a className='text-primaryColor' href="https://bilalmustafa-r9de.onrender.com" target='_blank'>BelalMustafa</a></p>
     </section>
   )
 }

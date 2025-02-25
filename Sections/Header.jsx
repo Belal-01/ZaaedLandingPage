@@ -64,7 +64,7 @@ const Header = () => {
     <>
     <section className={classNames('fixed left-0 right-0 top-0 h-20 z-20 bg-bgLightColor flex flex-row justify-between items-center sm:px-20 px-10 text-primaryColor overflow-hidden',{"blur-navbar":isBlur})}>
       <div>
-          <img src="/logoLight.jpg" className='w-24 h-24' alt="" />
+          <img src="/logoLight.png" className='w-24 h-24' alt="" />
       </div>
       <div className=''>
         <ul className=' flex-row lg:gap-10 gap-6 items-center hidden md:flex'>

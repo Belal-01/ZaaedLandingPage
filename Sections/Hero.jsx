@@ -1,11 +1,34 @@
 import React from 'react'
 import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 
 
 const Hero = () => {
-
+gsap.registerPlugin(ScrollTrigger)
   useGSAP(()=>{
-    
+    gsap.from('.heroTitle',{
+      translateX:-2000,
+      duration:0.6,
+      scrollTrigger:{
+        trigger:".heroTitle",
+        
+        scrub:false,
+        
+      }
+    }
+    )
+    gsap.from('.heroImg',{
+      translateX:+2000,
+      duration:0.6,
+      scrollTrigger:{
+        trigger:".heroImg",
+       
+        scrub:false,
+        
+      }
+    }
+    )
   },[])
   return (
     <section className='flex lg:flex-row flex-col  text-xl items-center h-screen pt-24 sm:px-20 px-10 bg-bgLightColor heroContainer' id='hero'>
