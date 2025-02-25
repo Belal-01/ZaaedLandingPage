@@ -21,7 +21,7 @@ const contactsInfo = [
 ]
 const Contacts = () => {
   return (
-    <section id='#contacts' className='pb-90 px-20'>
+    <section id='#contacts' className=' px-20'>
       <h2 className='text-2xl text-titleColor text-center py-10'>معلومات التواصل</h2>
       <h1 className='text-4xl font-semibold text-titleColor text-center'>
         يسعدنا دائمًا تواصلكم معنا

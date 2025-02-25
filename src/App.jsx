@@ -9,8 +9,6 @@ import Contacts from '../Sections/Contacts'
 import Footer from '../Sections/Footer'
 
 function App() {
-
-
   return (
     <div className='font-cairo'>
       <Header/>
