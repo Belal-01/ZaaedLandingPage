@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import {useGSAP} from '@gsap/react'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 const imgs = [{
   id:-3,
@@ -49,6 +49,7 @@ const AppView = () => {
   const [shiftToFirstImg,setShiftTOFirstImg] = useState(0);
   const [currentImgIndex,setCurrentImgIndex] = useState(0);
   const [animcomplete,setAnimComplete] = useState(true);
+  const cleanupRef = useRef(null);
   
  
 
@@ -56,7 +57,7 @@ const AppView = () => {
 
   const width =  window.innerWidth-240;
   const rightSpaceOfThImg = (width/2);
-  const shiftedSpace =3*243 - (rightSpaceOfThImg);
+  const shiftedSpace =3*242 - (rightSpaceOfThImg);
 
   setShiftTOFirstImg(shiftedSpace)
  }
@@ -65,6 +66,30 @@ const AppView = () => {
   window.addEventListener('resize',()=>{
     calculateTheshiftedSpace();
   })
+    
+  const length = imgs.length - 6;
+  let count = 0 
+  const intervalId = setInterval(() => {
+    setCurrentImgIndex(count)
+  
+    if(count>=length-1)
+      count = 0 
+    else
+     count +=1;
+
+    console.log("interval")
+  }, 3000);
+  // setInterval(intervalId)
+  const effect = () => {
+    console.log('Effect is running');
+    // Return the cleanup function
+    return () => {
+      clearInterval(intervalId);
+  };
+};
+cleanupRef.current = effect();
+
+return cleanupRef.current;
 
  },[])
 
@@ -91,8 +116,14 @@ const AppView = () => {
   })
  },[currentImgIndex])
 
+ const handleCleanup = () => {
+  if (cleanupRef.current) {
+      cleanupRef.current(); // Call the cleanup function manually
+  }
+};
 
  const handleImgScroll = (direction)=>{
+  
   const length = imgs.length-6;
   if(direction==="right"){
     if(currentImgIndex>0)
@@ -105,6 +136,8 @@ const AppView = () => {
   else if(currentImgIndex===length-1)
       setCurrentImgIndex(0)
   }
+  console.log("cleared")
+  // clearInterval(interval);
 
  }
 
@@ -130,18 +163,24 @@ const AppView = () => {
       </div>
 
       <div className='py-10 flex flex-row gap-10 items-center justify-center'>
-        <button className='py-2 px-4 bg-white opacity-45  text-white rounded-4xl cursor-pointer' onClick={()=>handleImgScroll("right")}>
+        <button className='py-2 px-4 bg-white opacity-45  text-white rounded-4xl cursor-pointer' onClick={()=>{
+          handleImgScroll("right")
+          handleCleanup()}}>
           <FaArrowRight className='text-primaryColor'/>
           </button>
         <div className='flex flex-row gap-2'>
           {imgs.map((img,index)=>{
             if(img.id>=0)
            return ( 
-           <div key={index} className={`w-2 h-2 ${img.id===currentImgIndex ? 'bg-primaryColor' : 'bg-gray-400'} rounded-full cursor-pointer`} onClick={()=>setCurrentImgIndex(img.id)}>
+           <div key={index} className={`w-2 h-2 ${img.id===currentImgIndex ? 'bg-primaryColor' : 'bg-gray-400'} rounded-full cursor-pointer`} onClick={()=>{
+            setCurrentImgIndex(img.id)
+            handleCleanup()}}>
             
            </div>)})}
         </div>
-        <button className='py-2 px-4  opacity-45 text-white rounded-4xl cursor-pointer' onClick={()=>handleImgScroll("left")}>
+        <button className='py-2 px-4  opacity-45 text-white rounded-4xl cursor-pointer' onClick={()=>{
+          handleImgScroll("left")
+          handleCleanup()}}>
               <FaArrowLeft className='text-primaryColor'/>
           </button>
       </div>

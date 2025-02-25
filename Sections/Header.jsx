@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Links} from "../constants/scripts"
 import classNames from 'classnames'
 import gsap from 'gsap'
@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react'
 
 const Header = () => {
   const [showMenu,setShowMenu] = useState(false)
-
+  const [isBlur,setIsBlure] = useState(false)
 
   useGSAP(()=>{
     if(showMenu){
@@ -46,10 +46,23 @@ const Header = () => {
   }
   },[showMenu])
 
+  useEffect(()=>{
+    window.addEventListener('scroll',()=>{
+      blurHeader();
+    })
+  },[])
+  const blurHeader =()=>{
+    if(window.scrollY>=80)
+      setIsBlure(true)
+    else
+      setIsBlure(false)
+    
+    }
+
 
   return (
     <>
-    <section className='fixed left-0 right-0 top-0 h-20 z-20 bg-bgLightColor flex flex-row justify-between items-center sm:px-20 px-10 text-primaryColor overflow-hidden'>
+    <section className={classNames('fixed left-0 right-0 top-0 h-20 z-20 bg-bgLightColor flex flex-row justify-between items-center sm:px-20 px-10 text-primaryColor overflow-hidden',{"blur-navbar":isBlur})}>
       <div>
           <img src="/logoLight.jpg" className='w-24 h-24' alt="" />
       </div>
@@ -62,6 +75,8 @@ const Header = () => {
       </div>
  
     </section>
+
+
     <span className='flex flex-col justify-between cursor-pointer min-h-6 md:hidden fixed left-10 top-7 z-40' onClick={()=>{setShowMenu(prev=>!prev)
           
         }}> 

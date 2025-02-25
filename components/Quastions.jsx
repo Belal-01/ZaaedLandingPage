@@ -43,7 +43,7 @@ const Quastions = (props) => {
       gsap.to(`.answerText-${props.id}`,{
         opacity:0,
         translateY:-10,
-        duration:0.4
+        duration:0.5
       })
 
     }
@@ -67,7 +67,7 @@ const Quastions = (props) => {
       gsap.to(`.answerText-${props.id}`,{
         opacity:1,
         translateY:0,
-        duration:0.4,
+        duration:0.5,
         
       })
     }
