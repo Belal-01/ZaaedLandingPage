@@ -22,23 +22,20 @@ const contactsInfo = [
 const Contacts = () => {
   return (
     <section id='#contacts' className='pb-90 px-20'>
-      <h2 className='text-2xl text-titleColor text-center py-10'>اتصل بنا</h2>
-      <h1 className='text-4xl font-semibold text-titleColor text-center'>يسعدنا دائمًا تواصلكم معنا</h1>
-      <div className="contactInfo grid grid-cols-5 gap-10 py-10">
-        <div className='col-span-3 bg-gray-100 rounded-3xl px-10 py-16'>
-
-        </div>
-
-
-        <div className='col-span-2 bg-bgLightColor rounded-3xl px-10 py-10'>
-          <h2 className='pb-5 text-2xl font-semibold text-titleColor'>معلومات التواصل</h2>
-          <div>
+      <h2 className='text-2xl text-titleColor text-center py-10'>معلومات التواصل</h2>
+      <h1 className='text-4xl font-semibold text-titleColor text-center'>
+        يسعدنا دائمًا تواصلكم معنا
+      </h1>
+      <div className="contactInfo gap-10 py-10">
+    
+          
+          <div className='flex flex-row gap-5 px-20 justify-between max-w-[800px] mx-auto'>
           {contactsInfo.map((info ,index)=><ContactInfo text={info.text} data={info.data} icon={info.icon} key={index}/>)}  
           </div>
           <div className=' Socialicons'>
 
           </div>
-        </div>
+        
 
       </div>
     </section>

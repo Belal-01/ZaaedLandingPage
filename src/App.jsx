@@ -6,6 +6,7 @@ import AppView from '../Sections/AppView'
 import WhoWeAre from '../Sections/WhoWeAre'
 import FAQ from '../Sections/FAQ'
 import Contacts from '../Sections/Contacts'
+import Footer from '../Sections/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <AppView />
       <FAQ />
       <Contacts />
+      <Footer />
     </div>
   )
 }
