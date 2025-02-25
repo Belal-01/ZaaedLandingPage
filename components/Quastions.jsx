@@ -48,6 +48,7 @@ const Quastions = (props) => {
         rotate:-180,
         duration:0.2,
         
+        
       })
       gsap.to(`.answerBox-${props.id}`,{
         height:100,
@@ -56,7 +57,8 @@ const Quastions = (props) => {
       gsap.to(`.answerText-${props.id}`,{
         opacity:1,
         translateY:0,
-        duration:0.4
+        duration:0.4,
+        
       })
     }
 
@@ -68,13 +70,13 @@ const Quastions = (props) => {
       <div className='flex flex-row gap-8'>
         <span className='text-2xl'>{props.id+1}</span>
         <div className={`flex flex-col gap-5 transition-all  answerBox-${props.id}`}>
-          <span className={`text-2xl text-titleColor font-bold`}>{props.quastion}</span>
+          <span className={`text-2xl  font-bold ${showAnswer?'text-primaryColor':'text-titleColor'} transition-colors`}>{props.quastion}</span>
          { <span className={`answerText-${props.id}`}>{props.answer}</span>}
         </div>
       </div>
       <div className='cursor-pointer plusSign' onClick={()=>setShowAnswer(prev=>!prev)}>
           <div className={`w-6 h-1 bg-titleColor rounded-xl verLine-${props.id}`}></div>
-          <div className={`w-6 h-1 bg-titleColor rounded-xl horLine-${props.id}`}></div>
+          <div className={`w-6 h-1 rounded-xl horLine-${props.id} ${showAnswer?'bg-primaryColor':'bg-titleColor'} transition-colors`}></div>
       </div>
       
     </div>

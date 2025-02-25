@@ -5,6 +5,7 @@ import Header from '../Sections/Header'
 import AppView from '../Sections/AppView'
 import WhoWeAre from '../Sections/WhoWeAre'
 import FAQ from '../Sections/FAQ'
+import Contacts from '../Sections/Contacts'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <WhoWeAre />
       <AppView />
       <FAQ />
+      <Contacts />
     </div>
   )
 }

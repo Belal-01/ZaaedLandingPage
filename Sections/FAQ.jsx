@@ -25,7 +25,7 @@ const questionsArr = [
 ]
 const FAQ = () => {
   return (
-    <section id='#FAQ' className='py-10 px-20  pb-90'>
+    <section id='#FAQ' className='py-10 px-20  '>
       <h2 className='text-2xl text-titleColor text-center py-10'>الأسئلة الشائعة</h2>
       <h1 className='text-4xl font-semibold text-titleColor text-center'>لتقديم خدمة أفضل اجبنا على أكثر الأسئلة شيوعاً</h1>
       <div className="quastions py-10 px-10">
