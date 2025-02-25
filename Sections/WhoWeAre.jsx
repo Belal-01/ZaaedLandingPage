@@ -8,8 +8,9 @@ const WhoWeAre = () => {
   
   return (
     <section id='who' className='py-10 sm:px-20 px-10'>
-      <h1 className='text-titleColor text-4xl text-center py-10'>من نحن </h1>
-      <p className='text-center text-2xl text-textColor'>زوائد إعمار هو تطبيق رقمي يتيح للمقاولين والافراد بيع وشراء مخلفات ومواد البناء الزائدة، مما يقلل الهدر ويخفض التكاليف في عمليات إعادة الإعمار .</p>
+      <h1 className='text-textColor text-4xl text-center py-10'>من نحن </h1>
+      <p className='text-center sm:text-4xl text-2xl text-titleColor '>
+        زوائد هو سوق إلكتروني يتيح لأصحاب المتاجر والمقاولين تحقيق دخل إضافي من خلال بيع مواد البناء الزائدة أو القديمة, مما يقلل الهدر ويخفض التكاليف  في عمليات إعادة الإعمار لأصحاب المشاريع الصغيرة والدخل المحدود .</p>
 
       <div className="features grid grid-cols-4 gap-10 justify-between py-20">
         {featurestext.map((fea,index)=><Feature icon={fea.icon} text={fea.text} id={index} key={index}/>)}
