@@ -1,5 +1,5 @@
 import React from 'react'
-import Quastions from '../components/quastions'
+import Quastions from '../components/Quastions'
 
 const questionsArr = [
   {
