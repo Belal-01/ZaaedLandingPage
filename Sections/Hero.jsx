@@ -56,7 +56,7 @@ gsap.registerPlugin(ScrollTrigger)
          </div>
       </div>
       <div className='heroImg flex-1 flex flex-row justify-center'>
-        <img src="/herozimg3.png" className=' 2xl:h-[700px] xl:h-[550px] lg:h-[500px] h-[400px]' alt="app welcom img" />
+        <img src="/heroImg2.png" className=' 2xl:h-[600px] xl:h-[450px] lg:h-[400px] h-[400px]' alt="app welcom img" />
       </div>
     </section>
   )
