@@ -28,20 +28,35 @@ gsap.registerPlugin(ScrollTrigger)
         
       }
     }
-    )
+  )
+  gsap.to('.heroImg',{
+    translateY:20,
+    duration:1.4,
+    repeat:-1,
+    yoyo:true,
+   
+  })
   },[])
   return (
-    <section className='flex lg:flex-row flex-col text-xl items-center h-screen pt-24 sm:px-20 px-10 gap-5 bg-bgLightColor heroContainer' id='hero'>
-      <div className='heroTitle flex-1 max-lg:flex max-lg:flex-col max-lg:justify-center'>
-         <h1 className='text-primaryColor font-bold sm:text-4xl text-2xl sm:py-10 py-5'>
-            حقق دخل إضافي من بيع الزوائد
+    <section className='sm:px-20 px-10 flex md:flex-row flex-col text-xl items-center h-screen pt-24  lg:gap-5 bg-bgLightColor heroContainer' id='hero'>
+      <div className='heroTitle flex-1 flex flex-col justify-between'>
+
+        <div>
+          <h1 className='text-primaryColor font-bold 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl text-2xl  xl:leading-16 md:leading-12 lg:pb-10'>
+            لا تهدرها ,استفد منها !
           </h1>
-         <p className='sm:text-2xl text-xl font-semibold text-titleColor'>
-          زوائد هو تطبيق إحترافي يتيح لأصحاب المتاجر الصغيرة والمتوسطة والمشاريع الإعمارية كسب دخل إضافي من خلال بيع المخزون الفائض.
-         </p>
+        </div>
+        <div>
+          <h1 className='text-primaryColor font-bold 2xl:text-6xl xl:text-4xl lg:text-4xl md:text-3xl text-2xl 2xl:py-10 py-5 xl:leading-16 md:leading-12'>
+              حقق دخل إضافي من بيع الزوائد
+            </h1>
+          <p className='2xl:text-4xl xl:text-2xl md:text-xl text-xl font-semibold text-titleColor'>
+            زوائد هو تطبيق إحترافي يتيح لأصحاب المتاجر الصغيرة والمتوسطة والمشاريع الإعمارية كسب دخل إضافي من خلال بيع المخزون الفائض.
+          </p>
+         </div>
       </div>
       <div className='heroImg flex-1 flex flex-row justify-center'>
-        <img src="/herozimg3.png" className='lg:h-[500px] h-[400px]' alt="app welcom img" />
+        <img src="/herozimg3.png" className=' 2xl:h-[700px] xl:h-[550px] lg:h-[500px] h-[400px]' alt="app welcom img" />
       </div>
     </section>
   )

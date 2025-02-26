@@ -96,46 +96,55 @@ export const featurestext = [
   }
 ]
 
-export const imgs = [{
+export const imgs = [
+{
+  id:-4,
+  src:"/zLang.jpg"
+},
+{
   id:-3,
-  src:"/zoaed1.jpg"
+  src:"/zRegister.jpg"
 },
 {
   id:-2,
-  src:"/zoaed2.jpg"
+  src:"/zpricing.jpg"
 },
 
 { 
   id:-1,
-  src:"/zoaed3.jpg"
+  src:"/zProduct.jpg"
 },
 { 
   id:0,
-  src:"/zoaed0.jpg"
+  src:"/zslogan.jpg"
 },
 { 
   id:1,
-  src:"/zoaed1.jpg"
+  src:"/zLang.jpg"
 },
 {
   id:2,
-  src:"/zoaed2.jpg"
+  src:"/zRegister.jpg"
 },
 {
   id:3,
-  src:"/zoaed3.jpg"
+  src:"/zpricing.jpg"
+},
+{
+  id:4,
+  src:"/zProduct.jpg"
 },
 {
   id:-3,
-  src:"/zoaed1.jpg"
+  src:"/zslogan.jpg"
 },
 {
   id:-2,
-  src:"/zoaed2.jpg"
+  src:"/zLang.jpg"
 },
 
 { 
   id:-1,
-  src:"/zoaed3.jpg"
+  src:"/zRegister.jpg"
 },
 ]

@@ -20,8 +20,8 @@ const Quastions = (props) => {
   const quastionEmlement = document.querySelector(`.quastionText-${props.id}`);
   const quastionHeight = quastionEmlement.scrollHeight;
   const answerHeight = answerElement.scrollHeight;
-  console.log("answerHight"+answerHeight)
-  console.log("quastionHiehgt"+quastionHeight)
+  // console.log("answerHight"+answerHeight)
+  // console.log("quastionHiehgt"+quastionHeight)
 
 
     if(!showAnswer){

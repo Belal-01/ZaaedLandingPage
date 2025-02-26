@@ -12,20 +12,26 @@ const AppView = () => {
  
 
  const calculateTheshiftedSpace = ()=>{
-
   const width =  window.innerWidth-240;
+  console.log("window Innder Widht"+window.innerWidth)
+  console.log( "width"+width)
   const rightSpaceOfThImg = (width/2);
-  const shiftedSpace =3*242 - (rightSpaceOfThImg);
+  const shiftedSpace =4*261 - (rightSpaceOfThImg);
 
   setShiftTOFirstImg(shiftedSpace)
  }
+
+ useEffect(()=>{
+  console.log("shiftToFirstImg"+shiftToFirstImg)
+ },[shiftToFirstImg])
+
  useEffect(()=>{
   calculateTheshiftedSpace();
   window.addEventListener('resize',()=>{
     calculateTheshiftedSpace();
   })
     
-  const length = imgs.length - 6;
+  const length = imgs.length - 7;
   let count = 0 
   const intervalId = setInterval(() => {
     setCurrentImgIndex(count)
@@ -35,7 +41,7 @@ const AppView = () => {
     else
      count +=1;
 
-    console.log("interval")
+    // console.log("interval")
   }, 3000);
   // setInterval(intervalId)
   const effect = () => {
@@ -64,7 +70,7 @@ return cleanupRef.current;
   // console.log('currentImgIndex',currentImgIndex)
   setAnimComplete(false)
   gsap.to(".slider",{
-    x:shiftToFirstImg+currentImgIndex*240,
+    x:shiftToFirstImg+currentImgIndex*260,
     duration:1,
     ease:"back.inOut",
     onComplete: () => {
@@ -82,7 +88,7 @@ return cleanupRef.current;
 
  const handleImgScroll = (direction)=>{
   
-  const length = imgs.length-6;
+  const length = imgs.length-7;
   if(direction==="right"){
     if(currentImgIndex>0)
         setCurrentImgIndex(currentImgIndex-1)
@@ -102,11 +108,11 @@ return cleanupRef.current;
   return (
     <section className='py-10' id='appPictures'>
       <div className='py-10'>
-        <h1 className='text-4xl font-bold text-center text-primaryColor'>صور التطبيف</h1>
+        <h1 className='text-4xl font-bold text-center text-primaryColor' > صور التطبيق </h1>
       </div>
       <div className='relative  '>
         <div className='overflow-x-auto appViewSlider'>
-        <div className='slider  flex flex-row justify-center w-fit pt-3'>
+        <div className='slider  flex flex-row gap-5 justify-center w-fit pt-3'>
           {imgs.map((img,index)=>(
             <div key={index} className='w-[240px] h-[470px] appImg '>
               <img src={img.src} className={`appImg-${img.id} ${img.id===currentImgIndex&&animcomplete ? 'opacity-100' : 'opacity-25 '} transition-opacity w-full h-full rounded-3xl overflow-hidden`} alt="" /></div>
@@ -114,7 +120,7 @@ return cleanupRef.current;
         </div>
         </div>
         <div className="layer flex flex-row justify-center absolute top-0 left-0 right-0 z-10">
-            <div className='w-[260px] h-[500px]'>
+            <div className='w-[260px] h-[490px]'>
               <img src="/phoneCover.png" className='w-full h-full' alt="" />
             </div>
         </div>
