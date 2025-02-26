@@ -60,7 +60,7 @@ export const questionsArr = [
   },
   {
     question:"ما هي طرق الدفع المتاحة في التطبيق ؟",
-    answer:" نظام دفع الكتروني متكامل من خلال syriatel cash"
+    answer:" يستطيع المشترون إتمام عمليات الدفع إلكترونًيا عبر SyriaEpay، والذي يتكامل مع مزودي خدمات الدفع مثل سيريتل كاش،إمتي إن كاش، والبنوك السورية."
   },
   {
     question:"ما هي  أهم الميزات التي يقدمها تطبيق زوائد؟",
@@ -98,44 +98,44 @@ export const featurestext = [
 
 export const imgs = [{
   id:-3,
-  src:"/landing.png"
+  src:"/zoaed1.jpg"
 },
 {
   id:-2,
-  src:"/welcom.png"
+  src:"/zoaed2.jpg"
 },
 
 { 
   id:-1,
-  src:"/welcom.png"
+  src:"/zoaed3.jpg"
 },
 { 
   id:0,
-  src:"/zoaed1.jpg"
+  src:"/zoaed0.jpg"
 },
 { 
   id:1,
-  src:"/zoaed2.jpg"
+  src:"/zoaed1.jpg"
 },
 {
   id:2,
-  src:"/landing.png"
+  src:"/zoaed2.jpg"
 },
 {
   id:3,
-  src:"/welcom.png"
+  src:"/zoaed3.jpg"
 },
 {
   id:-3,
-  src:"/landing.png"
+  src:"/zoaed1.jpg"
 },
 {
   id:-2,
-  src:"/welcom.png"
+  src:"/zoaed2.jpg"
 },
 
 { 
   id:-1,
-  src:"/welcom.png"
+  src:"/zoaed3.jpg"
 },
 ]

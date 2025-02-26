@@ -109,7 +109,7 @@ return cleanupRef.current;
         <div className='slider  flex flex-row justify-center w-fit pt-3'>
           {imgs.map((img,index)=>(
             <div key={index} className='w-[240px] h-[470px] appImg '>
-              <img src={img.src} className={`appImg-${img.id} ${img.id===currentImgIndex&&animcomplete ? 'opacity-100' : 'opacity-25 '}   transition-opacity w-full h-full rounded-4xl overflow-hidden`} alt="" /></div>
+              <img src={img.src} className={`appImg-${img.id} ${img.id===currentImgIndex&&animcomplete ? 'opacity-100' : 'opacity-25 '} transition-opacity w-full h-full rounded-3xl overflow-hidden`} alt="" /></div>
             ))}
         </div>
         </div>
