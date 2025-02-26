@@ -16,7 +16,7 @@ const AppView = () => {
   console.log("window Innder Widht"+window.innerWidth)
   console.log( "width"+width)
   const rightSpaceOfThImg = (width/2);
-  const shiftedSpace =4*261 - (rightSpaceOfThImg);
+  const shiftedSpace =4*262 - (rightSpaceOfThImg);
 
   setShiftTOFirstImg(shiftedSpace)
  }
