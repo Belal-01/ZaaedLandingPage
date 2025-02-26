@@ -95,3 +95,47 @@ export const featurestext = [
     text:"تحويلات بنكية موثوقة لقيمة السعر"
   }
 ]
+
+export const imgs = [{
+  id:-3,
+  src:"/landing.png"
+},
+{
+  id:-2,
+  src:"/welcom.png"
+},
+
+{ 
+  id:-1,
+  src:"/welcom.png"
+},
+{ 
+  id:0,
+  src:"/zoaed1.jpg"
+},
+{ 
+  id:1,
+  src:"/zoaed2.jpg"
+},
+{
+  id:2,
+  src:"/landing.png"
+},
+{
+  id:3,
+  src:"/welcom.png"
+},
+{
+  id:-3,
+  src:"/landing.png"
+},
+{
+  id:-2,
+  src:"/welcom.png"
+},
+
+{ 
+  id:-1,
+  src:"/welcom.png"
+},
+]

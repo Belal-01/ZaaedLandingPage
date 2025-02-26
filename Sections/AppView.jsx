@@ -2,49 +2,7 @@ import gsap from 'gsap';
 import {useGSAP} from '@gsap/react'
 import React, { useEffect, useRef, useState } from 'react'
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-const imgs = [{
-  id:-3,
-  src:"/landing.png"
-},
-{
-  id:-2,
-  src:"/welcom.png"
-},
-
-{ 
-  id:-1,
-  src:"/welcom.png"
-},
-{ 
-  id:0,
-  src:"/landing.png"
-},
-{ 
-  id:1,
-  src:"/welcom.png"
-},
-{
-  id:2,
-  src:"/landing.png"
-},
-{
-  id:3,
-  src:"/welcom.png"
-},
-{
-  id:-3,
-  src:"/landing.png"
-},
-{
-  id:-2,
-  src:"/welcom.png"
-},
-
-{ 
-  id:-1,
-  src:"/welcom.png"
-},
-]
+import { imgs } from '../constants/scripts';
 const AppView = () => {
   const [shiftToFirstImg,setShiftTOFirstImg] = useState(0);
   const [currentImgIndex,setCurrentImgIndex] = useState(0);

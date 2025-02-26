@@ -40,8 +40,8 @@ gsap.registerPlugin(ScrollTrigger)
           زوائد هو تطبيق إحترافي يتيح لأصحاب المتاجر الصغيرة والمتوسطة والمشاريع الإعمارية كسب دخل إضافي من خلال بيع المخزون الفائض.
          </p>
       </div>
-      <div className='heroImg flex-1'>
-        <img src="/heroImg.png" className='h-[500px]' alt="app welcom img" />
+      <div className='heroImg flex-1 flex flex-row justify-center'>
+        <img src="/herozimg3.png" className='lg:h-[500px] h-[400px]' alt="app welcom img" />
       </div>
     </section>
   )
