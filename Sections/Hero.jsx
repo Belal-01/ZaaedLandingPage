@@ -33,7 +33,9 @@ gsap.registerPlugin(ScrollTrigger)
   return (
     <section className='flex lg:flex-row flex-col text-xl items-center h-screen pt-24 sm:px-20 px-10 gap-5 bg-bgLightColor heroContainer' id='hero'>
       <div className='heroTitle flex-1 max-lg:flex max-lg:flex-col max-lg:justify-center'>
-         <h1 className='text-primaryColor font-bold sm:text-4xl text-2xl py-10'>حقق دخل إضافي من بيع الزوائد</h1>
+         <span className='text-primaryColor font-bold sm:text-4xl text-2xl sm:py-10 py-5'>
+            حقق دخل إضافي من بيع الزوائد
+          </span>
          <p className='sm:text-2xl text-xl font-semibold text-titleColor'>
           زوائد هو تطبيق إحترافي يتيح لأصحاب المتاجر الصغيرة والمتوسطة والمشاريع الإعمارية كسب دخل إضافي من خلال بيع المخزون الفائض.
          </p>
