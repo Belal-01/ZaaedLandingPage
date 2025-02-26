@@ -94,7 +94,7 @@ return cleanupRef.current;
  },[])
 
  useGSAP(() => {
-  console.log('shiftToFirstImg',shiftToFirstImg)
+  // console.log('shiftToFirstImg',shiftToFirstImg)
   gsap.to(".slider",{
     x:shiftToFirstImg,
     duration:2,
@@ -103,7 +103,7 @@ return cleanupRef.current;
  },[shiftToFirstImg])
 
  useGSAP(() => {
-  console.log('currentImgIndex',currentImgIndex)
+  // console.log('currentImgIndex',currentImgIndex)
   setAnimComplete(false)
   gsap.to(".slider",{
     x:shiftToFirstImg+currentImgIndex*240,
