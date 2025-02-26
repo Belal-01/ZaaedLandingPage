@@ -32,17 +32,17 @@ export const socialMedia = [
 
 export const contactsInfo = [
   {
-    data:"000 000  00 09",
+    data:"0932244969",
     text:"رقم الجوال",
     icon:"phone"
   },
   {
-    data:" 000 000 000 +963",
+    data:"+963932244969",
     text:"الواتساب",
     icon:"whatsApp"
   },
   {
-    data:"Support@gmail.com",
+    data:"mouazalbari@gmail.com",
     text:"البريد الإلكتروني",
     icon:"email"
   },
