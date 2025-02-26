@@ -20,8 +20,8 @@ const Quastions = (props) => {
   const quastionEmlement = document.querySelector(`.quastionText-${props.id}`);
   const quastionHeight = quastionEmlement.scrollHeight;
   const answerHeight = answerElement.scrollHeight;
-  // console.log("answerHight"+answerHeight)
-  // console.log("quastionHiehgt"+quastionHeight)
+  console.log("answerHight"+answerHeight)
+  console.log("quastionHiehgt"+quastionHeight)
 
 
     if(!showAnswer){
@@ -80,7 +80,7 @@ const Quastions = (props) => {
       <div className='flex flex-row gap-8'>
         <span className='text-2xl'>{props.id+1}</span>
         <div className={`flex flex-col gap-5 transition-all h-fit answerBox-${props.id}`}>
-          <span className={`sm:text-2xl text-xl font-bold ${showAnswer?'text-primaryColor':'text-titleColor'} transition-colors min-h-fit quastionText-${props.id}`}>{props.quastion}</span>
+          <span className={`sm:text-2xl text-lg font-bold ${showAnswer?'text-primaryColor':'text-titleColor'} transition-colors min-h-fit quastionText-${props.id}`}>{props.quastion}</span>
          { <span className={`answerText-${props.id} min-h-fit`}>{props.answer}</span>}
         </div>
       </div>

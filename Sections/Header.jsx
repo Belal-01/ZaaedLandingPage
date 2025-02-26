@@ -3,6 +3,7 @@ import {Links} from "../constants/scripts"
 import classNames from 'classnames'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import Navigations from '../components/Navigations'
 
 const Header = () => {
   const [showMenu,setShowMenu] = useState(false)
@@ -62,23 +63,18 @@ const Header = () => {
 
   return (
     <>
-    <section className={classNames('fixed left-0 right-0 top-0 h-20 z-20 bg-bgLightColor flex flex-row justify-between items-center sm:px-20 px-10 text-primaryColor overflow-hidden',{"blur-navbar":isBlur})}>
+    <header className={classNames('fixed left-0 right-0 top-0 h-20 z-20 bg-bgLightColor flex flex-row justify-between items-center sm:px-20 px-10 text-primaryColor overflow-hidden',{"blur-navbar":isBlur})}>
       <div>
           <img src="/logoLight.png" className='w-24 h-24' alt="" />
       </div>
       <div className=''>
-        <ul className=' flex-row lg:gap-10 gap-6 items-center hidden md:flex'>
-          {Links.map((link,index)=>
-          <li className='font-medium text-lg hover:underline underline-offset-8' key={index}><a href={link.href}>{link.name}</a>
-          </li>)}
-        </ul>
+        <Navigations  />
       </div>
  
-    </section>
+    </header>
 
 
     <span className='flex flex-col justify-between cursor-pointer min-h-6 md:hidden fixed left-10 top-7 z-40' onClick={()=>{setShowMenu(prev=>!prev)
-          
         }}> 
           <div className={classNames('sm:w-10 w-8 sm:h-[4px] h-[3px] bg-primaryColor rounded-full topMenu-icon')}></div>
           <div className={classNames('sm:w-6 w-5 sm:h-[4px] h-[3px] bg-primaryColor rounded-full ',{'hidden':showMenu})}></div>
