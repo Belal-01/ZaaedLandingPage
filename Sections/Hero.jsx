@@ -31,18 +31,18 @@ gsap.registerPlugin(ScrollTrigger)
   )
   gsap.to('.heroImg',{
     translateY:20,
-    duration:1.4,
+    duration:2.1,
     repeat:-1,
     yoyo:true,
    
   })
   },[])
   return (
-    <section className='sm:px-20 px-10 flex md:flex-row flex-col text-xl items-center h-screen pt-24  lg:gap-5 bg-bgLightColor heroContainer' id='hero'>
+    <section className='sm:px-20 px-10 flex md:flex-row flex-col text-xl items-center h-screen pt-24  lg:gap-5  bg-bgLightColor heroContainer' id='hero'>
       <div className='heroTitle flex-1 flex flex-col justify-between'>
 
         <div>
-          <h1 className='text-primaryColor font-bold 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl text-2xl  xl:leading-16 md:leading-12 lg:pb-10'>
+          <h1 className='text-primaryColor font-bold 2xl:text-4xl  md:text-3xl text-2xl  xl:leading-16 md:leading-12 lg:pb-10'>
             لا تهدرها ,استفد منها !
           </h1>
         </div>
@@ -56,7 +56,7 @@ gsap.registerPlugin(ScrollTrigger)
          </div>
       </div>
       <div className='heroImg flex-1 flex flex-row justify-center'>
-        <img src="/heroImg2.png" className=' 2xl:h-[600px] xl:h-[450px] lg:h-[400px] h-[400px]' alt="app welcom img" />
+        <img src="/heroImg2.png" className=' 2xl:h-[500px]  sm:h-[425px] h-[370px]' alt="app welcom img" />
       </div>
     </section>
   )
