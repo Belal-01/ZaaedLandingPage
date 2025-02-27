@@ -5,7 +5,7 @@ import { socialMedia } from '../constants/scripts'
 
 const Footer = () => {
   return (
-    <section className='sm:px-20 px-10' >
+    <section className='' >
 
       <div className='flex flex-row justify-center'>
        <ul className='flex flex-row flex-wrap justify-center gap-10 items-center '>

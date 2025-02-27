@@ -5,7 +5,7 @@ import { contactsInfo } from '../constants/scripts'
 
 const Contacts = () => {
   return (
-    <section id='contacts' className=' sm:px-20 px-10'>
+    <section id='contacts' className=''>
       <h2 className='text-2xl text-titleColor text-center py-10'>معلومات التواصل</h2>
       <h1 className='sm:text-4xl text-3xl font-semibold text-titleColor text-center'>
         يسعدنا دائمًا تواصلكم معنا

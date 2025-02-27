@@ -38,7 +38,7 @@ gsap.registerPlugin(ScrollTrigger)
   })
   },[])
   return (
-    <section className='sm:px-20 px-10 flex md:flex-row flex-col text-xl items-center h-screen pt-24  lg:gap-5  bg-bgLightColor heroContainer' id='hero'>
+    <section className=' flex md:flex-row flex-col text-xl items-center h-screen pt-24  lg:gap-5  bg-bgLightColor heroContainer' id='hero'>
       <div className='heroTitle flex-1 flex flex-col justify-between'>
 
         <div>

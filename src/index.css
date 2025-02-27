@@ -15,6 +15,9 @@
     margin:0;
     font-family: Cairo;
   }
+  section{
+    @apply sm:px-21 px-11;
+  }
 }
 
 

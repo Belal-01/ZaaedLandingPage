@@ -106,7 +106,7 @@ return cleanupRef.current;
  }
 
   return (
-    <section className='py-10' id='appPictures'>
+    <div className='py-10' id='appPictures'>
       <div className='py-10'>
         <h1 className='text-4xl font-bold text-center text-primaryColor' > صور التطبيق </h1>
       </div>
@@ -148,7 +148,7 @@ return cleanupRef.current;
               <FaArrowLeft className='text-primaryColor'/>
           </button>
       </div>
-    </section>
+    </div>
   )
 }
 
